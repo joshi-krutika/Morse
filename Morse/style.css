@@ -1,0 +1,39 @@
+body{
+	background-color: black;
+	/*display: flex;
+  	align-items: center; 
+  	justify-content: center;
+  	min-height: 100vh;*/
+}
+fieldset{
+	background-color: #191919;
+	min-width: 100px;
+	min-height: 400px;
+}
+form{
+	color: #6eb177;
+	font-size: 200%;
+	text-align: center;
+}
+#textboxid{
+	color: #6eb177;
+	background-color: #2e2e2c;
+	height: 40px;
+	font-size: 14pt;
+}
+
+#output{
+	color: #6eb177;
+	text-align: center;
+}
+widget-wrap {
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.widget-wrap label, .widget-wrap input, .widget-wrap select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}

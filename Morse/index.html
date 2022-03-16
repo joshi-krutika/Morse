@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+	function decodeMorse(morseCode) {
+  	var ref = { 
+    '.-':     'a',
+    '-...':   'b',
+    '-.-.':   'c',
+    '-..':    'd',
+    '.':      'e',
+    '..-.':   'f',
+    '--.':    'g',
+    '....':   'h',
+    '..':     'i',
+    '.---':   'j',
+    '-.-':    'k',
+    '.-..':   'l',
+    '--':     'm',
+    '-.':     'n',
+    '---':    'o',
+    '.--.':   'p',
+    '--.-':   'q',
+    '.-.':    'r',
+    '...':    's',
+    '-':      't',
+    '..-':    'u',
+    '...-':   'v',
+    '.--':    'w',
+    '-..-':   'x',
+    '-.--':   'y',
+    '--..':   'z',
+    '.----':  '1',
+    '..---':  '2',
+    '...--':  '3',
+    '....-':  '4',
+    '.....':  '5',
+    '-....':  '6',
+    '--...':  '7',
+    '---..':  '8',
+    '----.':  '9',
+    '-----':  '0',
+  };
+
+  return morseCode
+    .split('   ')
+    .map(
+      a => a
+        .split(' ')
+        .map(
+          b => ref[b]
+        ).join('')
+    ).join(' ');
+}
+
+
+function add(e) {
+console.log('Event', e.target)
+var decoded = document.getElementById('textboxid').value;
+var decode = decodeMorse(decoded);
+var d = decode.toUpperCase();
+// console.log(decode);
+// document.write(d)
+document.getElementById("output").innerHTML = d;
+e.preventDefault();
+// // new SpeechSynthesisUtterance object
+// let utter = new SpeechSynthesisUtterance();
+// utter.lang = 'en-US';
+// utter.text = 'Hello World';
+// utter.volume = 0.5;
+
+// // event after text has been spoken
+// utter.onend = function() {
+// 	alert('Speech has finished');
+// }
+
+// // speak
+// window.speechSynthesis.speak(utter);
+
+
+
+}
+</script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>MC-D</title>
+</head>
+<body>
+	<h1 align="center"><font color="6eb177">Morse Code decryptor</font></h1>
+	<fieldset>
+		<fieldset>
+			<br />
+			<form>
+				<p>Morse Code: <input type="text" id="textboxid" name="name"></p>
+				<button onclick="add(event)">Add</button>
+			</form>
+
+			<h1 id="output"></h1>
+			
+			<br />
+		</fieldset>
+    
+	</fieldset>
+      
+<script type="text/javascript" src="script.js"></script>
+	
+</body>
+</html> 
